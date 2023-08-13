@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div>
+    <img src="{% static 'images/shop1.jpg' %}" height="200px" width="100%">
+</div>
+<div class="container-fluid" style="margin-bottom:100px;">
+    <h2 class="text-center mb-2">Our Collections</h2>
+    <p class=text-align:justify;">A typical online store enables the customer to
+        browse the firm's range of products and services, view photos or images of the products,
+        along with information about the product specifications, features and prices. Online stores
+        usually enable shoppers to use "search" features to find specific models, brands or items.</p>
+</div>
+
+<div class="container-fluid mt-4" style="margin-bottom:100px">
+    <div class="row">
+        {% for i in f %}
+        <div class="col-sm-4">
+            <div class="card" style="width:24rem;height:100%;">
+  <img src="{{i.images.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{i.name}}</h5>
+    <p class="card-text" style="text-align:justify">{{i.desc}}</p>
+    <a href="{% url 'shop:allproducts' i.slug %}" class="btn btn-primary" style="position:relative;left:38%">Products</a>
+  </div>
+</div>
+        </div>
+{% endfor %}
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

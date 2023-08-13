@@ -1,0 +1,22 @@
+body
+{
+background-color:pink;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+
+.icon_size
+{
+font-size:20px;
+}
+
+.footer
+{
+height:30px;
+width:100%;
+background-color:white;
+text-align:center;
+position:fixed;
+bottom:0;
+left:0;
+}
